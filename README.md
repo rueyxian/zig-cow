@@ -33,7 +33,7 @@ const dep_cow = b.dependency("cow", .{
     .target = target,
     .optimize = optimize,
 });
-exe.addModule("cow", dep_lazy("cow"));
+exe.addModule("cow", dep_cow("cow"));
 ```
 
 ## Example
