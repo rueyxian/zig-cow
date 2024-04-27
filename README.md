@@ -18,8 +18,8 @@ To add `zig-cow` to your `build.zig.zon`:
     .name = "<YOUR PROGRAM>",
     .version = "0.0.0",
     .dependencies = .{
-        .cow = .{
-            .url = "https://github.com/rueyxian/zig-cow/archive/refs/tags/v0.0.1.tar.gz",
+        .lazy = .{
+            .url = "https://github.com/rueyxian/zig-lazy/archive/refs/tags/v0.0.0.tar.gz",
             .hash = "<CORRECT HASH WILL BE SUGGESTED>",
         },
     },
@@ -33,7 +33,7 @@ const dep_cow = b.dependency("cow", .{
     .target = target,
     .optimize = optimize,
 });
-exe.addModule("cow", dep_cow("cow"));
+exe.addModule("cow", dep_lazy("cow"));
 ```
 
 ## Example
